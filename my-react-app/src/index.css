@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Fallback utility: if you want a named class to set caret color without Tailwind
+	 (Tailwind provides `caret-{color}` utilities; this class is a simple fallback) */
+.custom-caret {
+	caret-color: #6366f1; /* Tailwind indigo-500 */
+}/* Hide scrollbar for Chrome, Safari */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
