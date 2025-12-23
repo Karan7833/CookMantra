@@ -53,7 +53,7 @@ export default function Header() {
 
             {/* DESKTOP LINKS */}
             <div className="hidden md:flex items-center gap-6">
-              <a className="text-sm text-[#DA70D6] cursor-pointer">Products</a>
+             <Link to="/Home"> <a className="text-sm text-[#DA70D6] cursor-pointer">Home</a></Link>
               <a className="text-sm text-[#880085] cursor-pointer">Pricing</a>
               <a className="text-sm text-[#DA70D6] cursor-pointer">Blog</a>
 
@@ -89,7 +89,7 @@ export default function Header() {
                   className="w-full bg-[#eef3f5] border border-gray-300 rounded-xl py-2 px-4 text-sm"
                 />
 
-                <a className="block py-1 text-[#DA70D6]">Products</a>
+                 <Link to="/Home">  <a className="block py-1 text-[#DA70D6]">Home</a></Link>
                 <a className="block py-1 text-[#880085]">Pricing</a>
                 <a className="block py-1 text-[#DA70D6]">Blog</a>
 
