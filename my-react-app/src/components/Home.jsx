@@ -6,6 +6,7 @@ export default function Home(props) {
   return (
     <>
     
+    <div className="grid grid-cols-1 md:grid-cols-4 m-7 gap-7 min-h-screen">
 
             
      
@@ -33,6 +34,8 @@ export default function Home(props) {
       <li className=''>
       <p className='ml-50 mt-10 text-2xl '> check Signup</p>
       </li>
+
+      </div>
     </>
   );
 };

@@ -100,12 +100,12 @@ export default function SignupPage() {
       >
         {/* Left - Decorative / Info */}
         <div className="p-8 hidden md:flex flex-col justify-center gap-4 bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
-          <h2 className="text-3xl font-extrabold">Create your account</h2>
-          <p className="opacity-90">Join us — create an account to save your progress and access exclusive features.</p>
+          <h2 className="text-3xl font-extrabold">Create your Cook Mantra account</h2>
+          <p className="opacity-90">From quick bites to festive feasts — your personal recipe space starts here.</p>
           <ul className="mt-4 space-y-2 text-sm opacity-95">
-            <li>• Fast and secure authentication</li>
-            <li>• Upload profile picture</li>
-            <li>• Manage settings and preferences</li>
+            <li>• Save and revisit your favorite recipes</li>
+            <li>• Personalized recommendations</li>
+            <li>• Sync your preferences across devices</li>
           </ul>
         </div>
 
