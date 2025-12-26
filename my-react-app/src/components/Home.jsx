@@ -6,7 +6,7 @@ export default function Home(props) {
   return (
     <>
     
-    <div className="grid grid-cols-1 md:grid-cols-4 m-7 gap-7 min-h-screen">
+    <div className="grid grid-cols-1 md:grid-cols-4 m-3 gap-7 min-h-screen">
 
             
      
