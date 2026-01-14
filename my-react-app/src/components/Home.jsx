@@ -1,43 +1,31 @@
-import React from 'react';
-import Additem from './Additem.jsx';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { getRecipes } from "../services/RecipeApi";
+import RecipeCard from "../components/RecipeCard";
+// import RecipeCard from "../components/RecipeCard";
 
-export default function Home(props) {
+const Home = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      const data = await getRecipes();
+      setRecipes(data || []);
+    };
+
+    fetchRecipes();
+  }, []);
+
   return (
-    <>
-    
-    <div className="grid grid-cols-1 md:grid-cols-4 m-3 gap-7 min-h-screen">
+    <div className="p-6">
+      <h1 className="text-4xl font-bold mb-6">All Recipes</h1>
 
-            
-     
-    <Link to="/Showrecipe">  <Additem
-        imgsrc="/kachori.png"
-        imgalt="Kachori"
-        tittle="Kachori (Khasta Kachori with dal)"
-        description="Khasta Dal Kachori – ek crispy aur flaky snack..."
-      /> </Link>
-
-     <Link to="/Showrecipe">  <Additem
-        imgsrc="/pavbhaji.png"
-        imgalt="Pav Bhaji"
-        tittle="Pav Bhaji Recipe"
-        description="Pav Bhaji is popular Indian street food..."
-      />  </Link>
-
-     <Link to="/Showrecipe">  <Additem
-        imgsrc="/samosa.png"
-        imgalt="Samosa"
-        tittle="Samosa Recipe"
-        description="Crispy samosa with spicy filling..."
-      /></Link>
-      <h2 className='ml-50 text-2xl font-bold   '>Work in progress! </h2>
-      <li className=''>
-      <p className='ml-50 mt-10 text-2xl '> check Signup</p>
-      </li>
-
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {recipes.map((item) => (
+          <RecipeCard key={item.idMeal} recipe={item} />
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
-// export default Home;
+export default Home;
